@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Manage Category</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/tabs.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" />
+    <script>
+      // Get the element with id="defaultOpen" and click on it
+      
+    </script>
+  </head>
+  <body>
+    <div class="container-scroller">
+      
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo" href="index.html"><img src="../assets/images/logo.png" alt="logo" style="width: 70px;height:70px"/></a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <div class="search-field d-none d-md-block">
+            <form class="d-flex align-items-center h-100" action="#">
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                </div>
+                <input type="text" class="form-control bg-transparent border-0" placeholder="Search projects">
+              </div>
+            </form>
+          </div>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="nav-profile-img">
+                  <img src="assets/images/faces/face1.jpg" alt="image">
+                  <span class="availability-status online"></span>
+                </div>
+                <div class="nav-profile-text">
+                  <p class="mb-1 text-black">David Greymaax</p>
+                </div>
+              </a>
+              <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="mdi mdi-cached me-2 text-success"></i> Activity Log </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">
+                  <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
+              </div>
+            </li>
+            <li class="nav-item d-none d-lg-block full-screen-link">
+              <a class="nav-link">
+                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="mdi mdi-email-outline"></i>
+                <span class="count-symbol bg-warning"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                <h6 class="p-3 mb-0">Messages</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="assets/images/faces/face4.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Mark send you a message</h6>
+                    <p class="text-gray mb-0"> 1 Minutes ago </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="assets/images/faces/face2.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Cregh send you a message</h6>
+                    <p class="text-gray mb-0"> 15 Minutes ago </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src="assets/images/faces/face3.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Profile picture updated</h6>
+                    <p class="text-gray mb-0"> 18 Minutes ago </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <h6 class="p-3 mb-0 text-center">4 new messages</h6>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+                <i class="mdi mdi-bell-outline"></i>
+                <span class="count-symbol bg-danger"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                <h6 class="p-3 mb-0">Notifications</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-success">
+                      <i class="mdi mdi-calendar"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Event today</h6>
+                    <p class="text-gray ellipsis mb-0"> Just a reminder that you have an event today </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-warning">
+                      <i class="mdi mdi-settings"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
+                    <p class="text-gray ellipsis mb-0"> Update dashboard </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-info">
+                      <i class="mdi mdi-link-variant"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
+                    <p class="text-gray ellipsis mb-0"> New admin wow! </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <h6 class="p-3 mb-0 text-center">See all notifications</h6>
+              </div>
+            </li>
+            <li class="nav-item nav-logout d-none d-lg-block">
+              <a class="nav-link" href="#">
+                <i class="mdi mdi-power"></i>
+              </a>
+            </li>
+            <li class="nav-item nav-settings d-none d-lg-block">
+              <a class="nav-link" href="#">
+                <i class="mdi mdi-format-line-spacing"></i>
+              </a>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">
+                <span class="menu-title">Dashboard</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="themes.html">
+                <span class="menu-title">Theme</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="languages.html">
+                <span class="menu-title">Language</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Administrator</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="general_setting.html">General Setting</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="manage_school.html">Manage School</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="payment_set.html">Payment Setting</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="sms_setting.html">SMS Setting</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="email_setting.html">Email Setting</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="academic_year.html">Academic Year</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="user_role.html">User Role (ACL)</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="role_permission.html">Role Permission (ACL)</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="super_admin.html">Manage Super Admin</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="manage_user.html">Manage User</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="reset_pass.html">Reset User Password</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="reset_username.html">Reset Username</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="user_credential.html">User Credential</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="activity_log.html">Activity Log</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="manage_feedback.html">Manage Feedback</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="backups_database.html">Backup Database</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="opening_hour.html">Opening Hour</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#templates" aria-expanded="false" aria-controls="templates">
+                <span class="menu-title">Templates</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="templates">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="sms_template.html"> SMS Templates </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="email_template.html"> Email Templates </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#f-office" aria-expanded="false" aria-controls="f-office">
+                <span class="menu-title">Front Office</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="f-office">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="visitor_purp.html"> Visitor Purpose </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="manage_visitor.html"> Visitor Info </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Call Log </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Postal Dispatch </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Postal Recieve </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#h-resource" aria-expanded="false" aria-controls="h-resource">
+                <span class="menu-title">Human Resource</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="h-resource">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Manage Designation </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Manage Employee </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#teacher" aria-expanded="false" aria-controls="teacher">
+                <span class="menu-title">Teacher</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="teacher">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Department </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Manage Teacher </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Class Lecture </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Rating </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#leave" aria-expanded="false" aria-controls="leave">
+                <span class="menu-title">Manage Leave</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="leave">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Leave Type </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Leave Application </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Waiting Application </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Approved Application </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Declined Application </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#academic" aria-expanded="false" aria-controls="academic">
+                <span class="menu-title">Academic</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="academic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Class </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Section </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Subject </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Syllabus </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Material </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Live Class </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Assignment </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Submission </a></li>     
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#lesson" aria-expanded="false" aria-controls="lesson">
+                <span class="menu-title">Lesson Plan</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="lesson">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Topic </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Lesson </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Lesson Timeline </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Lesson Status </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Lesson Plan </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/icons/mdi.html">
+                <span class="menu-title">Class Routine</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/icons/mdi.html">
+                <span class="menu-title">Guardian</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#manage-stud" aria-expanded="false" aria-controls="manage-stud">
+                <span class="menu-title">Manage Students</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="manage-stud">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Student Type </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Student List </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Admit Student </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Bulk Admission  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Online Admission </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Student Activity </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#attendance" aria-expanded="false" aria-controls="attendance">
+                <span class="menu-title">Attendance</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="attendance">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Student Attendance </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Teacher Attendance</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Employee Attendance </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Absent Email </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Absent SMS </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#card-gen" aria-expanded="false" aria-controls="card-gen">
+                <span class="menu-title">Generate Card</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="card-gen">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> ID Card Setting </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Admit Card Setting </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Teacher ID Card </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Employee ID Card  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Student ID Card </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Student Admit Card </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#online" aria-expanded="false" aria-controls="online">
+                <span class="menu-title">Online Exam</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="online">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Instruction </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Question Bank</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Online Exam </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Exam Result </a></li>
+                </ul>
+              </div>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#manage-exam" aria-expanded="false" aria-controls="manage-exam">
+                <span class="menu-title">Manage Exam</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="manage-exam">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Exam Grade </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Exam Term</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Schedule </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Suggestion </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Attendance </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#exam-mark" aria-expanded="false" aria-controls="exam-mark">
+                <span class="menu-title">Exam Mark</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+              </a>
+              <div class="collapse" id="exam-mark">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Manage Mark</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Exam Term Result</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Exam Final Result</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Merit List</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Mark Sheet</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Result Card</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Mark Send by Email</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Mark Send by SMS</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Result Send by Email</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Result Send by SMS</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/icons/mdi.html">
+                <span class="menu-title">Promotion</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#certificate" aria-expanded="false" aria-controls="certificate">
+                <span class="menu-title">Certificate</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="certificate">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Certain Type </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Generate Certificate  </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#inven" aria-expanded="false" aria-controls="inven">
+                <span class="menu-title">Inventory</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+              </a>
+              <div class="collapse" id="inven">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Supplier</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Warehouse</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Category</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Product</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Purchase</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Sale</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Issue</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#inven" aria-expanded="false" aria-controls="inven">
+                <span class="menu-title">Asset Management</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+              </a>
+              <div class="collapse" id="inven">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Vendor</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Store</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Category</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Item</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Purchase</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Issue</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#library" aria-expanded="false" aria-controls="library">
+                <span class="menu-title">Library</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="library">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Book </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Library Member</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Issue & Return </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> E-Book </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#transport" aria-expanded="false" aria-controls="transport">
+                <span class="menu-title">Transport</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="transport">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Vehicle </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Transport Route  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Transport Member  </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#hostel" aria-expanded="false" aria-controls="hostel">
+                <span class="menu-title">Hostel</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="hostel">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Manage Hostel </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Manage Room  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Hostel Member  </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/icons/mdi.html">
+                <span class="menu-title">Message</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#mail" aria-expanded="false" aria-controls="mail">
+                <span class="menu-title">Mail & SMS</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="mail">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Email </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> SMS  </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#complain" aria-expanded="false" aria-controls="complain">
+                <span class="menu-title">Complain</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="complain">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Complain Type </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Manage Complain  </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#announce" aria-expanded="false" aria-controls="announce">
+                <span class="menu-title">Announcement</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="announce">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Notice </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> News  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Holiday  </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#schol" aria-expanded="false" aria-controls="schol">
+                <span class="menu-title">Scholarship</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="schol">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Candidate </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Donor  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Scholarship  </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/icons/mdi.html">
+                <span class="menu-title">Event</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#payroll" aria-expanded="false" aria-controls="payroll  ">
+                <span class="menu-title">Payroll</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="payroll">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Salary Grade </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Salary Payment  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Salary History  </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#account" aria-expanded="false" aria-controls="account">
+                <span class="menu-title">Accounting</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+              </a>
+              <div class="collapse" id="account">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Discount</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Fee Type</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Fee Collection</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Manage Invoice</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Due Invoice</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Due Receipt</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Paid Reciept</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Due Fee Email</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Due Fee SMS</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Income Head</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Income</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Expenditure Head</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Expenditure</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#report" aria-expanded="false" aria-controls="report">
+                <span class="menu-title">Report</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+              </a>
+              <div class="collapse" id="report">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Income Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Expenditure Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Invoice Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Due Fee Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Fee Collection Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Accounting Balance Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Library Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Student Attendance Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Student Yearly Attendance Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Teacher Attendance Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Teacher Yearly Attendance Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Employee Attendance Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Employee Yearly Attendance Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Student Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Student Invoice Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Student Activity Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Payroll Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Daily Transaction Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Daily Statement Report</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Exam Result Report</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#gallery" aria-expanded="false" aria-controls="gallery">
+                <span class="menu-title">Media Gallery</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="gallery">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Gallery </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Gallery Image  </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#frontend" aria-expanded="false" aria-controls="frontend">
+                <span class="menu-title">Manage Frontend</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="frontend">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Frontend Page </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Slider  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> About School  </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#misc" aria-expanded="false" aria-controls="misc">
+                <span class="menu-title">Miscelleanous</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="misc">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Manage Award </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Manage Todo  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> FAQs  </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#sub" aria-expanded="false" aria-controls="sub">
+                <span class="menu-title">Subscription(SaaS)</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="sub">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> FAQs </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Slider  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Subscription Setting  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> General Setting  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Subscription Plan  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Subscription  </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#profile" aria-expanded="false" aria-controls="profile">
+                <span class="menu-title">Profile</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+              </a>
+              <div class="collapse" id="profile">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> My Profile </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Reset Password  </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Log Out  </a></li>
+                </ul>
+              </div>
+            </li>
+
+          </ul>
+        </nav>
+            <!--Add Tab|Add Form|Change Table Content-->
+            <div class="main-panel">
+              <div class="content-wrapper">
+                <div class="page-header">
+                  <h3 class="page-title"> Manage Category </h3>
+                  </nav>
+                </div>
+               
+                <div class="col-lg-12 grid-margin stretch-card" >
+                  
+                    <div class="card" >
+                      <div class="card-body">
+                        <div class="tab2 btn-group cent" role="group">
+                          <button type="button" class="tablinks btn btn-outline-primary" onclick="openTab(event, 'list')" id="defaultOpen">List</button>
+                          <button type="button" class="tablinks btn btn-outline-primary" onclick="openTab(event, 'add')">Add</button>
+                        </div>
+                        <table class="table table-bordered tabcontent" id="list">
+                          <thead>
+                            <tr>
+                                <th> #SL </th>
+                                <th> School </th>
+                                <th> Name </th>
+                                <th> Note </th>
+                                <th> Action </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+
+                        <form class="forms-sample tabcontent" id="add">
+                          <div class="form-group">
+                            <label for="exampleInputName1">School Name</label>
+                            <input type="text" class="form-control" id="exampleInputName1" placeholder="School Name">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputCity1">Name</label>
+                            <input type="text" class="form-control" id="exampleInputBF" placeholder="Name">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleTextarea1">Note</label>
+                            <textarea class="form-control" id="exampleTextarea1" rows="4" placeholder="Note"></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+                          <button class="btn btn-light">Cancel</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <!-- partial:../../partials/_footer.html -->
+              <footer class="footer">
+                <div class="container-fluid d-flex justify-content-between">
+                  <span class="text-muted d-block text-center text-sm-start d-sm-inline-block">Copyright © bootstrapdash.com 2021</span>
+                  <span class="float-none float-sm-end mt-1 mt-sm-0 text-end"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin template</a> from Bootstrapdash.com</span>
+                </div>
+              </footer>
+              <!-- partial -->
+            </div>
+          </div>
+        </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    
+    <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="../assets/js/tabs.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="../assets/js/jquery.cookie.js" type="text/javascript"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../assets/js/off-canvas.js"></script>
+    <script src="../assets/js/hoverable-collapse.js"></script>
+    <script src="../assets/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/theme-button.js"></script>
+    <script src="../assets/js/todolist.js"></script>
+    <script src="../assets/js/calendar-style.js"></script>
+    <!-- End custom js for this page -->
+  </body>
+</html>
